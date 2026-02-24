@@ -20,6 +20,8 @@ Pin Configuration of 555 Timer:
 •	Pin 6 → Threshold
 •	Pin 7 → Discharge
 •	Pin 8 → Vcc
+<img width="509" height="391" alt="ASTABLE" src="https://github.com/user-attachments/assets/6513d600-80e0-4cbc-9ece-079c77180e97" />
+
 ## Connections:
 •	R1 → Between Vcc and Pin 7
 •	R2 → Between Pin 7 and Pins 2 & 6
@@ -38,9 +40,14 @@ Pin Configuration of 555 Timer:
 7.	Measure time period and frequency.
 ## Tabulation
 S.No	        R1 (kΩ)	      R2 (kΩ)	       C (µF)	        Theoretical Frequency	          Practical Frequency
+<img width="874" height="208" alt="Screenshot 2026-02-23 094953" src="https://github.com/user-attachments/assets/aa96f6e3-17f4-4642-9a73-15015e9529e0" />
+
 ## Waveforms
 •	Output (Pin 3) → Square wave
 •	Capacitor voltage → Exponential charging & discharging waveform
+<img width="1368" height="844" alt="Astable wf" src="https://github.com/user-attachments/assets/c267da64-aa48-402d-b02b-7cdd09775487" />
+
+
 ## Result
 The Astable Multivibrator using NE555 Timer IC was successfully designed and simulated in Proteus.
 A continuous square wave output was obtained.
@@ -52,7 +59,47 @@ The practical frequency closely matches the theoretical frequency.
 •	Used in clock generation, LED flashing, and tone generation.
 ## Viva Questions
 1.	What are the operating modes of 555 timer?
+The 555 timer operates in three modes:
+
+Monostable Mode (One-shot mode)
+
+Produces one single output pulse for a trigger input.
+
+Has one stable state and one quasi-stable state.
+
+Astable Mode (Free-running mode)
+
+Produces continuous square wave output.
+
+No stable state.
+
+Bistable Mode (Flip-flop mode)
+
+Has two stable states (SET and RESET).
 2.	What are the threshold levels in astable mode?
+In astable mode, the capacitor charges and discharges between:
+
+Upper Threshold Level = 2/3 Vcc
+
+Lower Threshold Level = 1/3 Vcc
+
+These levels are set internally by three 5kΩ resistors (voltage divider inside the IC).
 3.	Write the frequency formula.
+f=1.44/(R1+2R2)C
+C is capacitor
+f is frequency in Hz
 4.	What is duty cycle?
+Duty Cycle is the percentage of time the output is HIGH in one complete cycle.
+Ton/Ton+Toff*100%
 5.	What happens if R2 increases?
+f R₂ increases:
+
+Charging time increases
+
+Discharging time increases
+
+Total time period increases
+
+Frequency decreases
+
+Duty cycle slightly increase
